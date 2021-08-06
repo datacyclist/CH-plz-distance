@@ -1,3 +1,12 @@
+##############################
+# Herunterladen von offiziellen PLZ-Geodaten von Swisstopo
+# Zweck: Berechnung von Distanzen zwischen PLZ
+#
+# github@georgruss.ch, 2021-08-06
+##############################
+
+if(!(dir.exists("cache"))) dir.create("cache")
+if(!(dir.exists("plz"))) dir.create("plz")
 
 # offizielle Daten siehe Geokatalog hier:
 # https://data.geo.admin.ch/ch.swisstopo-vd.ortschaftenverzeichnis_plz/

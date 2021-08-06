@@ -1,3 +1,10 @@
+##############################
+# Einlesen von offiziellen PLZ-Geodaten von Swisstopo
+# Zweck: Berechnung von Distanzen zwischen PLZ
+#
+# github@georgruss.ch, 2021-08-06
+##############################
+
 library(sp)
 library(raster)
 library(rgdal)

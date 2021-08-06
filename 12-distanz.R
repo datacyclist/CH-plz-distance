@@ -1,15 +1,16 @@
-#require(sp)
-#require(raster)
+##############################
+# Berechnung von Distanzen zwischen PLZ
+#
+# github@georgruss.ch, 2021-08-06
+##############################
+
 require(rgdal)
-#library(sf)
-library(dplyr)
-library(tidyr)
+#library(dplyr)
+#library(tidyr)
 library(sf)
 
 source("10-download-data.R") # gets official data from URL
 source("11-load-plzdata.R") # loads SpatialPolygonsDataFrame sPLZ
-
-
 
 #sPLZ <- readOGR(dsn="plz/PLZO_GDB_LV95/PLZO_GDB_LV95.gdb", verbose=TRUE, layer="PLZO_OSNAME")
 sPLZ <- readOGR(dsn="plz/PLZO_GDB_LV95/PLZO_GDB_LV95.gdb", layer="PLZO_PLZ")
@@ -59,8 +60,6 @@ get_dists <- function(plz1, plz2){
 																		 )
 	)
 
-	cat("centroid-dist fertig\n")
-	
 	##############################
 	# Distanz = minimaler Abstand der Polygone (bei benachbarten PLZ = Null)
 	##############################
@@ -88,8 +87,10 @@ return(dists)
 
 }
 
-
+# Beispiel: Lausanne und Zürich
 t1 <- get_dists(1007,8001)
+
+print(t1)
 
 
 
