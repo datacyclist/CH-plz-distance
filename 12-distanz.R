@@ -86,11 +86,22 @@ dists <- data.frame(
 return(dists)
 
 }
+##############################
+# Beispiel: Lausanne und Zürich Oerlikon
+##############################
 
-# Beispiel: Lausanne und Zürich
-t1 <- get_dists(1007,8001)
+t1 <- get_dists(1004,8050)
 
 print(t1)
 
+##############################
+# einzelnes Polygon mal ausgeben (jaja, könnte man auch gleich für alle machen
+# und dann puzzeln)
+##############################
 
+PLZ <- '9500'
+png(file=paste("fig/plzpolygon-", PLZ, ".png", sep=""))
+sfplzprint <- sPLZ[sPLZ$PLZ==9500,]
+plot(sfplzprint)
+dev.off()
 
