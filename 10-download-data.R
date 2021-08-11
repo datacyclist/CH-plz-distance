@@ -7,6 +7,7 @@
 
 if(!(dir.exists("cache"))) dir.create("cache")
 if(!(dir.exists("plz"))) dir.create("plz")
+if(!(dir.exists("fig"))) dir.create("fig")
 
 # offizielle Daten siehe Geokatalog hier:
 # https://data.geo.admin.ch/ch.swisstopo-vd.ortschaftenverzeichnis_plz/
